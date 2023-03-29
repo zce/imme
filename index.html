@@ -13,7 +13,7 @@
 			} catch(e){
 				console.error(e);
 			}
-		
+
 		</script>
 		<style>
 			html {
@@ -60,7 +60,7 @@
 		<script type="text/javascript" crossorigin="anonymous" src="./thirdparty/adapter.js"></script>
 		<style id="lightbox-animations" type="text/css"></style>
 		<!-- <link rel="manifest" href="manifest.json" /> -->
-			<!-- ios support 
+			<!-- ios support
 			<link rel="apple-touch-icon" href="images/icons/icon-72x72.png" />
 			<link rel="apple-touch-icon" href="images/icons/icon-96x96.png" />
 			<link rel="apple-touch-icon" href="images/icons/icon-128x128.png" />
@@ -80,17 +80,17 @@
 		<span itemprop="thumbnail" itemscope itemtype="http://schema.org/ImageObject">
 			<link itemprop="url" href="./media/vdoNinja_logo_full.png" />
 		</span>
-		
+
 		<script type="text/javascript" crossorigin="anonymous"  src="./thirdparty/CodecsHandler.js?ver=45"></script>
 		<script type="text/javascript" crossorigin="anonymous" src="./thirdparty/aes.js"></script>
 		<script type="text/javascript" crossorigin="anonymous" src="./webrtc.js?ver=589"></script>
 		<input id="zoomSlider" type="range" style="display: none;" />
 		<span id="electronDragZone" style="pointer-events: none; z-index:-10; position:absolute;top:0;left:0;width:100%;height:2%;-webkit-app-region: drag;min-height:20px;"></span>
 		<div id="header">
-			
+
 			<a id="logoname" href="./" style="text-decoration: none; color: white; margin: 0 2px 0px 8px;">
 				<span data-translate="logo-header">
-					<span id="qos">V</span>DO.Ninja 
+					<span id="qos">V</span>DO.Ninja
 				</span>
 			</a>
 			<div id="head1">
@@ -99,8 +99,8 @@
 			</div>
 			<div id="head5" class="hidden"></div>
 			<div id="head3" style="display: inline-block;" class="hidden">
-				<span style="color: #888;" id="copythisurl"> &nbsp; 
-					<span data-translate="copy-this-url">Copy this URL into an OBS "Browser Source"</span> <i style="color: #CCC;" class="las la-long-arrow-alt-right"></i> &nbsp; 
+				<span style="color: #888;" id="copythisurl"> &nbsp;
+					<span data-translate="copy-this-url">Copy this URL into an OBS "Browser Source"</span> <i style="color: #CCC;" class="las la-long-arrow-alt-right"></i> &nbsp;
 				</span>
 			</div>
 			<div id="head3a" style="display: inline-block;" class="hidden">
@@ -118,7 +118,7 @@
 			<div id="head4" style="display: inline-block;" class="hidden">
 				<span style="font-size: 68%; color: white;">
 					<span data-translate="you-are-in-the-control-center">Control center for room:</span>
-					
+
 					<div id="dirroomid" style="font-size: 140%; color: #99c; display: inline-block;"></div>
 					<span id="saveRoom" onclick="saveRoom(this)" style='cursor:pointer;margin-left:10px;' title="Will remember the room, prompting you the next time you visit if you wish to load this director's room again">💾</span>
 					<span id="togglePreviewMode" onclick="switchModes()" style='cursor:pointer;margin-left:2px;' title="Toggle between the director control-room view and a scene preview-mode.">🪟</span>
@@ -130,26 +130,26 @@
 			</div>
 			<div id="head6" class="hidden" data-translate="only-director-can-hear-you">Only the director can hear you currently.</div>
 			<div id="head7" class="hidden" data-translate="director-muted-you">The director has muted you.</div>
-			
+
 		</div>
 		<div id="controlButtons" class="hidden">
 			<div id="obsState" class="hidden" >ACTIVE</div>
 			<div id="subControlButtons">
-			
+
 				<div id="blindAllGuests" title="Blind all guests in room (toggle)" alt="Blind all guests in room (toggle)" aria-label="Blind all guests in room" onmousedown="event.preventDefault(); event.stopPropagation();"  onclick="blindAllGuests(this, event)"  tabindex="16" role="button" aria-pressed="false" onkeyup="enterPressedClick(event,this);"  class="hidden float" style="cursor: pointer;" >
 					<i class="toggleSize las la-eye my-float"></i>
 				</div>
-			
+
 				<div id="queuebutton" title="Load the next guest in queue" alt="Load the next guest in queue"  aria-label="Load next guest in queue" onmousedown="event.preventDefault(); event.stopPropagation();"  onclick="nextQueue()"  tabindex="16" role="button" aria-pressed="false" onkeyup="enterPressedClick(event,this);"  class="hidden float" style="cursor: pointer;" >
 					<i id="queuetoggle" class="toggleSize las la-stream my-float"></i>
 					<div id="queueNotification"></div>
 				</div>
-				
+
 				<div id="sharefilebutton" title="Transfer any file to the group" alt="Transfer any file to the group" aria-label="Select file to transfer" onmousedown="event.preventDefault(); event.stopPropagation();"  onclick="toggleFileshare()"  tabindex="16" role="button" aria-pressed="false" onkeyup="enterPressedClick(event,this);"  class="float" style="cursor: pointer;" >
-					<i id="filesharetoggle" class="toggleSize las la-file-upload my-float"></i> 
+					<i id="filesharetoggle" class="toggleSize las la-file-upload my-float"></i>
 					<div id="transferNotification"></div>
 				</div>
-				
+
 				<div id="chatbutton" title="Toggle the Chat" alt="Toggle the Chat" aria-label="Text chat" onmousedown="event.preventDefault(); event.stopPropagation();"  onclick="toggleChat()"  tabindex="16" role="button" aria-pressed="false" onkeyup="enterPressedClick(event,this);"  class="hidden float" style="cursor: pointer;" >
 					<i id="chattoggle" class="toggleSize las la-comment-alt my-float"></i>
 					<div id="chatNotification"></div>
@@ -185,35 +185,35 @@
 					<i id="fullscreenPageToggle" onmousedown="event.preventDefault(); event.stopPropagation();"  class="toggleSize las la-expand-arrows-alt my-float"></i>
 				</div>
 				<div id="flipcamerabutton" onmousedown="event.preventDefault(); event.stopPropagation();"  title="Cycle the Cameras"  onclick="cycleCameras()" class="hidden float"  tabindex="21" role="button" aria-pressed="false" onkeyup="enterPressedClick(event,this);" style="cursor: pointer;" aria-label="Cycle Cameras" alt="Cycle the Cameras">
-					<i id="settingstoggle" class="toggleSize las la-sync-alt my-float"></i> 
+					<i id="settingstoggle" class="toggleSize las la-sync-alt my-float"></i>
 				</div>
-				
+
 				<div id="obscontrolbutton" onmousedown="event.preventDefault(); event.stopPropagation();"  title="OBS Remote Controller; start/stop and change scenes." onclick="toggleOBSControls();" class="hidden float"  tabindex="22" role="button" aria-pressed="false" onkeyup="enterPressedClick(event,this);" style="cursor: pointer;" aria-label="Remote OBS control menu" alt="Toggle the Remote OBS Controls Menu">
 					<i id="obscontroltoggle" class="toggleSize las la-gamepad my-float"></i>
 				</div>
-				
+
 				<div id="roomsettingsbutton" onmousedown="event.preventDefault(); event.stopPropagation();"  title="Room Settings" onclick="toggleRoomSettings();" class="hidden float"  tabindex="22" role="button" aria-pressed="false" onkeyup="enterPressedClick(event,this);" style="cursor: pointer;" alt="Toggle the Room Settings Menu" aria-label="Room settings menu">
 					<i id="roomsettingstoggle" class="toggleSize las la-users-cog my-float"></i>
 				</div>
-				
+
 				<div id="settingsbutton" onmousedown="event.preventDefault(); event.stopPropagation();"  title="Your audio and video Settings"  onclick="toggleSettings()" class="hidden float"  tabindex="22" role="button" aria-pressed="false" onkeyup="enterPressedClick(event,this);" style="cursor: pointer;" alt="Toggle Settings Menu" aria-label="Settings menu">
 					<i id="settingstoggle" class="toggleSize las la-cog my-float"></i>
 				</div>
-				
+
 				<div id="hangupbutton"  onmousedown="event.preventDefault(); event.stopPropagation();" title="Hangup the Call" aria-label="Hang up" alt="Hangup the Call" onclick="hangup()" class="hidden float"  tabindex="23" role="button" aria-pressed="false" onkeyup="enterPressedClick(event,this);" style="cursor: pointer;" >
 					<i class="toggleSize my-float las la-phone rotate225" aria-hidden="true"></i>
 				</div>
 				<div id="raisehandbutton" onmousedown="event.preventDefault(); event.stopPropagation();"  data-raised="0" title="Alert the host you want to speak"  aria-label="Raise hand" alt="Alert the host you want to speak" tabindex="24" role="button" aria-pressed="false" onkeyup="enterPressedClick(event,this);" onclick="raisehand()" class="hidden float" style="cursor: pointer;">
 					<i class="toggleSize my-float las la-hand-paper" style="position: relative; right: 1px;" aria-hidden="true"></i>
 				</div>
-				
+
 				<div id="pptbackbutton" onmousedown="event.preventDefault(); event.stopPropagation();" title="Go back a slide" aria-label="Back a slide" alt="Go back a slide" tabindex="25" role="button" aria-pressed="false" onkeyup="enterPressedClick(event,this);" onclick="gobackSlide()" class="hidden float red" style="cursor: pointer;">
 					<i class="toggleSize my-float las la-chevron-left" style="position: relative; right: 1px;" aria-hidden="true"></i>
 				</div>
 				<div id="pptnextbutton" onmousedown="event.preventDefault(); event.stopPropagation();" title="Next slide" aria-label="Next slide" alt="Next slide" tabindex="25" role="button" aria-pressed="false" onkeyup="enterPressedClick(event,this);" onclick="nextSlide()" class="hidden float" style="cursor: pointer;">
 					<i class="toggleSize my-float las la-chevron-right" style="position: relative; right: 1px;" aria-hidden="true"></i>
 				</div>
-				
+
 				<div id="recordLocalbutton" onmousedown="event.preventDefault(); event.stopPropagation();"  data-state="0" title="Record your stream to disk" aria-label="Record your stream to disk" alt="Record your stream to disk" tabindex="25" role="button" aria-pressed="false" onkeyup="enterPressedClick(event,this);" onclick="recordLocalVideoToggle();" class="hidden float" style="cursor: pointer;">
 					<i class="toggleSize my-float las la-dot-circle" style="position: relative;" aria-hidden="true"></i>
 				</div>
@@ -234,7 +234,7 @@
 			</div>
 			<span
 					id="reportbutton"
-					title="Submit any error logs" 
+					title="Submit any error logs"
 					onclick="submitDebugLog();"
 					style="cursor: pointer; display:none;z-index:3;"
 					class="hidden"
@@ -243,7 +243,7 @@
 			</span>
 			<span
 					id="helpbutton"
-					title="Show Help Info" 
+					title="Show Help Info"
 					onclick="warnUser('For support, please browse https://reddit.com/r/vdoninja or join the live chat on Discord at https://discord.vdo.ninja.\n\nThe Docs also contains many help guides and advanced settings, located at https://docs.vdo.ninja.\n\nTo access the video stats menu, hold CTRL (command) and Left-Click on a video. Most video issues can be fixed by using Wired Internet instead of Wi-Fi.')"
 					style="cursor: pointer; display:none;"
 					alt="How to Use This with OBS"
@@ -258,9 +258,9 @@
 			</span>
 		</span>
 		<div id="mainmenu" class="row" style="opacity: 0;">
-			
+
 			<div id="container-1" title="Add Group Chat to OBS"  alt="Add Group Chat to OBS" tabindex="2" role="button" aria-pressed="false" onkeyup="enterPressedClick(event,this);" class="column columnfade pointer rounded card" style=" overflow-y: auto;">
-				
+
 					<h2>
 						<span data-translate="add-group-chat">Create a Room</span>
 					</h2>
@@ -270,68 +270,68 @@
 						<span data-translate="rooms-allow-for">Rooms allow for group-chat and the tools to manage multiple guests.</span>
 						<br />
 						<br />
-						
+
 						<table >
 						 <tr>
 							<th style="text-align:right;" class="labelLarge">
 								<b>
-								<span data-translate="room-name">Room Name</span>: 
+								<span data-translate="room-name">Room Name</span>:
 								</b>
 							</th>
 							<th class="labelSmall"></th>
 							<th style="text-align:left;" >
 								<div class="labelSmall">
 									<b>
-										<span data-translate="room-name">Room Name</span>: 
+										<span data-translate="room-name">Room Name</span>:
 									</b>
 								</div>
 								<input type="text" autocorrect="off" autocapitalize="none"  id="videoname1" placeholder="Enter a room name here" onkeydown="checkStrengthRoom(event, 'securityLevelRoom');" onchange="checkStrengthRoom(event, 'securityLevelRoom');" onkeyup="enterPressed(event, createRoom);" maxlength="30" style="max-width: 431px;width: 100%;font-size: 110%; padding: 5px;" />
 								<button onclick="getById('videoname1').value = session.generateRandomString();getById('securityLevelRoom').style.display='none';" title="Generate a random room name" class="randomRoomName"></button>
 								<div id="securityLevelRoom" style="display:none;margin-top:3px;position:relative;top:3px;font-size:0.8em;"></div>
 							</th>
-							
+
 						</tr><tr>
-						
+
 							<th style="text-align:right;" class="labelLarge">
 								<b>
-									<span data-translate="password-input-field">Password</span>: 
+									<span data-translate="password-input-field">Password</span>:
 								</b>
 							</th>
 							<th class="labelSmall"></th>
 							<th  style="text-align:left;">
 								<div class="labelSmall">
 									<b>
-										<span data-translate="password-input-field">Password</span>: 
+										<span data-translate="password-input-field">Password</span>:
 									</b>
 								</div>
 								<input type="text" autocorrect="off" autocapitalize="none" id="passwordRoom" placeholder="Optional room password here" onkeydown="checkStrengthRoom(event, 'securityLevelRoom');" onchange="checkStrengthRoom(event, 'securityLevelRoom');"  onkeyup="enterPressed(event, createRoom);" style="max-width: 431px;width: 100%;font-size: 110%; padding: 5px;" />
 							</th>
-						
+
 						</tr><tr >
-						
+
 							<th style="text-align:right; padding: 5px; padding-top: 20px;">
 								<input id="broadcastFlag" type="checkbox" title="For large group rooms, this option can reduce the load on remote guests substantially" />
 							</th><th style="text-align:left;; padding-top: 20px;">
 							<b>
 								<span data-translate="guests-only-see-director"  style="cursor: help;" title="For large group rooms, this option can reduce the load on remote guests substantially" >The guests can see the director, but not other guests' videos</span>
 							</b>
-							</th>	
+							</th>
 						</tr><tr>
-						
+
 							<th style="text-align:right; padding: 5px;; padding-bottom: 20px;">
 								<input id="showdirectorFlag" type="checkbox" title="The director will be visible in scenes as if a performer themselves." />
 							</th><th style="text-align:left;; padding-bottom: 20px;">
 							<b>
 								<span data-translate="scenes-can-see-director" style="cursor: help;" title="If checked, the director can be added to scenes as if a guest. Otherwise, the director will never appear in a scene." >The director will be performing as well, appearing in group scenes</span>
 							</b>
-							</th>	
+							</th>
 						</tr><tr>
 							<th style="text-align:right; padding: 5px;">
-								
+
 							</th>
 							<th style="text-align:left;">
 								<b>
-									<span data-translate="default-codec-select" title="Which video codec would you want used by default?" >Preferred Video Codec:  </span> 
+									<span data-translate="default-codec-select" title="Which video codec would you want used by default?" >Preferred Video Codec:  </span>
 									<select style="font-size:1.1em" id="codecGroupFlag" type="checkbox" title="For large group rooms, this option can reduce the load on remote guests substantially" >
 										<option value="default" selected>Default</option>
 										<option value="vp9">VP9</option>
@@ -341,10 +341,10 @@
 									</select >
 								</b>
 							</th>
-							
+
 						</tr>
 						</table>
-						
+
 						<span style="margin: 0 auto; width: 470px; max-width:100%;display: block;">
 							<button onclick="createRoom()" class="gobutton" style="width:100%;" alt="Enter the room as the group's director" title="You'll enter as the room's director">
 								<span data-translate="enter-the-rooms-control">Enter the room's Control Center in the director's role</span>
@@ -353,7 +353,7 @@
 							<button class="white roomnotes" style="display: block;" onclick="toggle(document.getElementById('roomnotes'),this);">
 								<span data-translate="show-tips">Show me some tips..</span>
 							</button>
-							
+
 							<ul style=" margin: auto auto; max-width: 500px; display: none; text-align: left;" class="roomnotes" id="roomnotes">
 								<span data-translate="added-notes" >
 									<u>
@@ -431,12 +431,12 @@
 								<label for="fullhd">
 									<span data-translate="max-resolution">Max Resolution</span>
 								</label> |
-								
+
 								<input type="radio" checked id="halfhd" alt="720p60 video capture"  name="resolution" value="1" />
 								<label for="halfhd">
 									<span data-translate="balanced">Balanced</span>
 								</label> |
-								
+
 								<input type="radio" id="nothd" name="resolution" alt="360p30 video capture"  value="2" />
 								<label for="nothd">
 									<span data-translate="smooth-cool">Smooth and Cool</span>
@@ -480,7 +480,7 @@
 							<p><span id="headphoneTipContext1"></span></p>
 						</div>
 					</div>
-					
+
 					<div id="avatarDiv" class="hidden">
 						<div style="text-align: left;display: inline-block;">
 							<i class="las la-robot"></i><span data-translate="select-avatar-image"> Default Avatar / Placeholder Image </span>
@@ -493,19 +493,19 @@
 							</label>
 							<label style="width:130px;display:inline-block;margin:10px 1px; text-align: center; cursor:pointer;">
 							  <i class="las la-hdd" style="font-size: 3em;"></i><br />Select Local Image
-							  <input type="file" onchange="changeAvatarImage(event, this)" accept="image/*" style="position: fixed; top: -100em; margin-left:10px; border:1px solid #555;"> 
+							  <input type="file" onchange="changeAvatarImage(event, this)" accept="image/*" style="position: fixed; top: -100em; margin-left:10px; border:1px solid #555;">
 							</label>
 						</div>
 					</div>
-					
+
 					<div id="effectsDiv">
 						<div style="text-align: left;display: inline-block;">
 							<i class="las la-robot"></i><span data-translate="select-digital-effect"> Digital Video Effects </span>
 						</div>
 						<select id="effectSelector" alt="Digital video effect options"  onchange="effectsDynamicallyUpdate(event, this);">
-							<option value="0" data-translate="no-effects-applied">No effects applied</option>	
+							<option value="0" data-translate="no-effects-applied">No effects applied</option>
 							<option value="3" data-translate="blurred-background">Blurred background</option>
-							<option value="4" data-translate="digital-greenscreen">Digital greenscreen</option>	
+							<option value="4" data-translate="digital-greenscreen">Digital greenscreen</option>
 							<option value="5" data-translate="virtual-background">Virtual background</option>
 							<option value="6" data-translate="face-mesh" title="experimental">Face mesh (slow load) 👨‍🔬</option>
 							<option value="7" data-translate="digital-zoom">Digital zoom</option>
@@ -519,15 +519,15 @@
 						<span data-effectsNotice="true" style='display:none; font-size: 140%; margin-left:10px; vertical-align: middle; cursor:pointer' title="Improve performance and quality with this tip" onclick="warnUser('Use a Chromium Based Browser');">
 							<i class="las la-info-circle"></i>
 						</span>
-						
+
 						<div id="selectImageTFLITE" style="display:none;margin-top:10px;">
-							
+
 						</div>
 						<div id="selectEffectAmount" style="display:none;margin-top:10px;">
 							<label for="selectEffectAmountInput" style="width: 113px;display: inline-block;">Effect Amount</label>
 							<input id="selectEffectAmountInput" style="display: inline-block;width: 350px; max-width: 60%;margin:6px 0;" name="selectEffectAmountInput" title="Adjust the amount of effect applied" type="range" oninput="changeEffectAmount(event, this)" onchange="changeEffectAmount(event, this)" min="0" step="1" max="20">
 						</div>
-						
+
 					</div>
 					<div id="addPasswordBasic" >
 						<i class="las la-key"></i><span data-translate="add-a-password"> Add a Password</span>
@@ -536,13 +536,13 @@
 							width: 200px;
 							margin: 0 6px;"/>
 					</div>
-					
+
 					<div id="SafariWarning" class="startupWarning hidden">
 						<i class="las la-exclamation-circle"></i>
 						<p><span data-translate="use-chrome-instead">Consider using a Chromium-based browser instead.<br />
  						Safari is more prone to having audio issues</span></p>
 					</div>
-					
+
 				</div>
 				<div class="outer close">
 					<div class="inner">
@@ -575,12 +575,12 @@
 								<label for="fullhd">
 									<span data-translate="max-resolution">1080p (hi-def)</span>
 								</label> &nbsp;&nbsp;|&nbsp;&nbsp;
-								
+
 								<input type="radio" checked id="halfhd2" name="resolution2" value="1" />
 								<label for="halfhd">
 									<span data-translate="balanced">720p (balanced)</span>
 								</label> &nbsp;&nbsp;|&nbsp;&nbsp;
-								
+
 								<input type="radio" id="nothd2" name="resolution2" value="2" />
 								<label for="nothd">
 									<span data-translate="smooth-cool">360p (smooth)</span>
@@ -618,7 +618,7 @@
 					<br />
 					<div id="audioScreenCaptureDocs" data-translate="application-audio-capture">For application-specific audio capture, <a href='https://docs.vdo.ninja/audio' style='color: #007AC8;' target="_blank">see here</a></div>
 					<div id="audioScreenCaptureDocs2" data-translate="1080p-screen-capture-guide">For achieving 1080p60 game-capture, <a href='https://docs.vdo.ninja/guides/how-to-screen-share-in-1080p' style='color: #007AC8;'  target="_blank">see here</a></div>
-					
+
 				</div>
 				<div class="outer close">
 					<div class="inner">
@@ -634,7 +634,7 @@
 				</h2>
 				<div id="gencontent2" style="display:none;background-color: rgb(221, 221, 221); max-height: 100%;min-height: 90%;"></div>
 				<div id="gencontent" class="container-inner">
-					
+
 					<br />
 					<br />
 					<span data-translate="here-you-can-pre-generate">Here you can pre-generate a reusable Browser Source link and a related guest invite link.</span>
@@ -740,7 +740,7 @@
 								</span>
 							</div>
 						</div>
-						<div class="invite_setting_group_links">See the 
+						<div class="invite_setting_group_links">See the
 							<a style="text-decoration: none; color: blue;" target="_blank" href="https://docs.vdo.ninja/advanced-settings">documentation</a> for a list of all options and details.<br /><br />
 							Try out the advanced <a style="text-decoration: none; color: blue;" target="_blank" href="https://invite.vdo.ninja/">invite generator</a> here as well.
 						</div>
@@ -754,13 +754,13 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div id="dropButton" onclick="dropDownButtonAction()" title="More Options"><i class="las la-chevron-down" ></i></div>
-			
+
 			<div id="container-5" class="column columnfade pointer rounded card hidden" style=" overflow-y: auto;">
 				<h2><span data-translate="share-local-video-file">Stream Media File</span></h2>
 				<div class="container-inner">
-					
+
 					<br /><br />
 					<span data-translate="select-the-video-files-to-share">SELECT THE VIDEO FILES TO SHARE</span><br /><br />
 					<input id="fileselector" onchange="session.publishFile(this,event);" type="file" accept="video/*,audio/*" alt="Hold CTRL (or CMD) to select multiple files" title="Hold CTRL (or CMD) to select multiple files" multiple/>
@@ -778,10 +778,10 @@
 						<p>Safari does not support this feature. Consider Chrome or Firefox instead.</p>
 					</div>
 					<br /><br />
-					To host a file for download, rather than for streaming, try the following instead: 
+					To host a file for download, rather than for streaming, try the following instead:
 					<input id="fileselector2" onchange="session.hostFile(this,event);" type="file" title="Transfer any file"/>
 				</div>
-				
+
 				<div class="outer close">
 					<div class="inner">
 						<label class="labelclass">
@@ -790,7 +790,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div id="container-6" class="column columnfade pointer rounded card hidden" style=" overflow-y: auto;">
 				<h2><span data-translate="share-website-iframe">Share Website</span></h2>
 				<i style="margin-top:30px;font-size:560%;overflow:hidden;" class="las la-broadcast-tower"></i>
@@ -800,7 +800,7 @@
 					<br />
 					<span data-translate="enter-the-website-URL-you-wish-to-share">Enter the URL website you wish to share.</span><br /><br />
 					<input type="text" autocorrect="off" id="iframeURL" autocapitalize="none" style="margin:10px; border:2px solid; padding:10px; width:400px;" title="Enter an HTTPS URL" multiple/><br />
-					<button onclick="previewIframe(getById('iframeURL').value);" >Preview</button> 
+					<button onclick="previewIframe(getById('iframeURL').value);" >Preview</button>
 					<button onclick="this.innerHTML = 'Update'; session.publishIFrame(getById('iframeURL').value);" >Share</button><br />
 					<div class="message-card info">
 						<h1>Usage information</h1>
@@ -821,52 +821,52 @@
 				</div>
 
 			</div>
-			
+
 			<div id="container-7" class="column columnfade pointer rounded card hidden" style="overflow: hidden;" onclick="window.location = './speedtest.html';">
 				<h2><span data-translate="run-a-speed-test">Run a Speed Test</span></h2>
 				<i style="margin-top:30px;font-size:600%;overflow:hidden;" class="las la-tachometer-alt"></i>
 			</div>
-			
+
 			<div id="container-8" class="column columnfade pointer rounded card hidden" style="overflow: hidden;" onclick="window.location = './mixer.html';">
 				<h2><span data-translate="try-the-mixer-out">Custom Mixed Layouts</span></h2>
 				<i style="margin-top:30px;font-size:600%;overflow:hidden;" class="las la-blender"></i>
 			</div>
-			
+
 			<div id="container-14" class="column columnfade pointer rounded card hidden" style="overflow: hidden;" onclick="window.location = 'https://versus.cam';">
 				<h2><span data-translate="try-out-versus-cam">Multi-Stream Monitor</span></h2>
 				<i style="margin-top:30px;font-size:600%;overflow:hidden;" class="las la-gamepad"></i>
 			</div>
-			
+
 			<div id="container-15" class="column columnfade pointer rounded card hidden" style="overflow: hidden;" onclick="window.location = './comms.html';">
 				<h2><span data-translate="voice-comms-app">Group Voice Comms</span></h2>
 				<i style="margin-top:30px;font-size:600%;overflow:hidden;" class="las la-comments"></i>
 			</div>
-			
+
 			<div id="container-9" class="column columnfade pointer rounded card hidden" style="overflow: hidden;" onclick="window.location = 'https://guides.vdo.ninja';">
 				<h2><span data-translate="read-the-guides">Basic Usage Guides</span></h2>
 				<i style="margin-top:30px;font-size:600%;overflow:hidden;" class="las la-book-open"></i>
 			</div>
-			
+
 			<div id="container-13" class="column columnfade pointer rounded card hidden" style="overflow: hidden;" onclick="window.location = 'https://linkgen.vdo.ninja';">
 				<h2><span data-translate="wizard-link-generator">Wizard Link Generator</span></h2>
 				<i style="margin-top:30px;font-size:600%;overflow:hidden;" class="las la-hat-wizard"></i>
 			</div>
-			
+
 			<div id="container-10" class="column columnfade pointer rounded card hidden" style="overflow: hidden;" onclick="window.location = 'https://docs.vdo.ninja';">
 				<h2><span data-translate="get-full-documentation">Full Documentation</span></h2>
 				<i style="margin-top:30px;font-size:600%;overflow:hidden;" class="las la-info"></i>
 			</div>
-			
+
 			<div id="container-11" class="column columnfade pointer rounded card hidden" style="overflow: hidden;" onclick="window.location = 'https://github.vdo.ninja';">
 				<h2><span data-translate="get-the-source-code">Source Code</span></h2>
 				<i style="margin-top:30px;font-size:600%;overflow:hidden;" class="las la-code-branch"></i>
 			</div>
-			
+
 			<div id="container-12" class="column columnfade pointer rounded card hidden" style="overflow: hidden;" onclick="window.location = 'https://docs.vdo.ninja/getting-started/sponsor';">
 				<h2><span data-translate="show-your-support">Show Your Support</span></h2>
 				<i style="margin-top:30px;font-size:600%;overflow:hidden;" class="las la-heartbeat"></i>
 			</div>
-			
+
 			<p></p>
 			<div id="info" class="fullcolumn columnfade">
 				<center>
@@ -878,18 +878,18 @@
 							<li>Bring live video from your smartphone, remote computer, or friends directly into OBS or other studio software.</li>
 							<li>We use cutting edge Peer-to-Peer forwarding technology that offers privacy and ultra-low latency</li>
 							<br />
-							<li>Youtube video 
+							<li>Youtube video
 								<i class="lab la-youtube"></i>
 								<a href="https://www.youtube.com/watch?v=QaA_6aOP9z8&list=PLWodc2tCfAH1l_LDvEyxEqFf42hOBKqQM&index=1" alt="Youtube video demoing VDO.Ninja">Demoing it here</a>
 							</li>
-							
+
 							<br />
 							<i>
 								<a href="https://docs.vdo.ninja/common-errors-and-known-issues/known-issues" title="For more known issues, click here" target="_blank"><span style="color: red;">Known issues:</span></a>
 							</i>
 							<br />
 							<li>
-								If the video fails to load in OBS Studio, where the browser source remains blank, try disabling hardware-acceleration or 
+								If the video fails to load in OBS Studio, where the browser source remains blank, try disabling hardware-acceleration or
 								<a href='https://docs.vdo.ninja/common-errors-and-known-issues/obs.ninja-doesnt-show-up-in-obs-or-is-choppy' title="link out to the vdo.ninja help guide for OBS Studio" target="_blank">refer to this help guide</a> for more.
 							</li>
 							<li>
@@ -908,8 +908,8 @@
 							<br />
 							<h3>
 							   🛠 For support, join the <a href="https://discord.gg/T4xpQVv">Discord <i class="lab la-discord"></i></a> or see the <a href="https://www.reddit.com/r/VDONinja/">sub-reddit <i class="lab la-reddit-alien"></i></a>. The <a href="https://docs.vdo.ninja/">documentation is here</a> and my personal email is <i>steve@seguin.email</i>
-							</h3> 
-								
+							</h3>
+
 						</span>
 					</div>
 				</center>
@@ -938,9 +938,9 @@
 						<br /><br />
 						<span style='color:red'>Known Limitations with Group Rooms:</span><br />
 						<li>A group room can handle up to around 30 guests, depending on numerous factors, including CPU and available bandwidth of all guests in the room. To achieve more than around 7-guests though, you will likely want to <a href="https://www.youtube.com/watch?v=bpRa8-UYCGc" title="Youtube Video demoing how to do this">disable video sharing between guests</a>. Using &broadcast, &roombitrate=0 or &novideo are options there.</li>
-						
+
 						<li>Videos will appear of low quality on purpose for guests and director; this is to save bandwidth and CPU resources. It will be high-quality within OBS still though.</li>
-						
+
 						<li>The state of the scenes, such as which videos are active in a scene, are lost when the director resets the control-room or the scene.</li>
 						<br />
 						Further Notes:<br /><br />
@@ -954,12 +954,12 @@
 						<li>https://invite.cam is a free service provided that can help obfuscuate the URL parameters of an invite link given to guests.</li>
 						<li>Adding &showonly=SOME_OBS_VIRTUALCAM to the guest invite links allows for only a single video to be seen by the guests; this can be output of the OBS Virtual Camera for example</li>
 						<br />
-						
+
 						For advanced URL options and parameters, <a href="https://docs.vdo.ninja/advanced-settings">see the Wiki.</a>
 					</span>
 				</div>
 			</div>
-			
+
 			<div class='directorContainer half' id='directorLinks1' style='display:none;margin-top:0;'>
 				<div class='directorBlock'>
 					<h2 title="Invite a guest or camera source to publish into the group room" style="margin-top: 5px;"><i class="las la-video director-link-icons" ></i><span data-translate="invite-a-guest">INVITE A GUEST</span></h2>
@@ -978,7 +978,7 @@
 					<span>
 				</div>
 			</div>
-			
+
 			<div class='directorContainer half' id='directorLinks2' style='margin-left: 5px;display:none;margin-top:0;'>
 				<div class='directorBlock' style="background-color: var(--green-accent);" >
 					<h2 title="Use this link in the OBS Browser Source to capture the video or audio" style="margin-left: 1px;margin-top: 5px;"><i class="las la-th-large director-link-icons" style="margin-right: 6px;" ></i> <span data-translate="capture-a-group-scene">CAPTURE A GROUP SCENE</span></h2>
@@ -997,7 +997,7 @@
 					<span>
 				</div>
 			</div>
-			
+
 			<div class='directorContainer' id="customizeLinks" style='display:none;margin-top:0;padding-top:15px'>
 				<div class='directorBlock' id="customizeLinks1" style='display:none;margin-top:0;padding-bottom:0;'>
 					<div style="display:inline-block;margin-top: 12px;   position: relative;  margin-right:10px;">
@@ -1012,21 +1012,21 @@
 						</label>
 						<span data-translate="hide-audio-only-sources">Hide audio-only sources</span>
 						<Br />
-						
+
 						<label class="switch" title="Allow for remote stat monitoring via the monitoring tool">
 						  <input type="checkbox" data-param="&remote" onchange="updateLink(1,this);">
 						  <span class="slider"></span>
 						</label>
 						<span data-translate="remote-monitoring">Remote Monitoring</span>
 						<Br />
-						
+
 						<label class="switch" title="The guest will be asked if they want to reload the previous link when revisiting">
 						  <input type="checkbox" data-param="&sticky" onchange="updateLink(1,this);">
 						  <span class="slider"></span>
 						</label>
 						<span data-translate="invite-saved-to-cookie">Invite saved to cookie</span>
 						<Br />
-						
+
 						<label class="switch" title="Guest will be prompted to enter a Display Name">
 						  <input type="checkbox" data-param="&l" onchange="updateLink(1,this);">
 						  <span class="slider"></span>
@@ -1050,7 +1050,7 @@
 						  <span class="slider"></span>
 						</label>
 						<span data-translate="show-welcome-message">Show welcome message</span>
-						
+
 					</div>
 					<div  style="display:inline-block;margin-top: 12px; position: relative; margin-right:10px;">
 						<label class="switch" title="Request 1080p60 from the Guest instead of 720p60, if possible">
@@ -1088,14 +1088,14 @@
 						  <span class="slider"></span>
 						</label>
 						<span class="tooltip" style='cursor: help;position:relative;bottom:2px;font-family:"Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", Times, Symbola, Aegyptus, Code2000, Code2001, Code2002, Musica, serif, LastResort;'>⚠<span class="tooltiptext">Uses more CPU and freezes the video if the guest doesn't keep the tab visible.</span></span> <span data-translate="virtual-backgrounds">Virtual backgrounds</span>
-						
+
 						<br />
 						<label class="switch" title="Disable animated transitions during video mixing">
 						  <input type="checkbox" data-param="&animate=0" onchange="updateLink(1,this);">
 						  <span class="slider"></span>
 						</label>
 						<span data-translate="disable-animated-mixing">Disable animations</span>
-						
+
 						<Br />
 						<label class="switch" title="This mode encodes the video and audio into chunks, which are shared with multiple viewers. Limited browser support. Can potentially reduce CPU and improve video quality, but will rely on a buffer.">
 						  <input type="checkbox" data-param="&chunked=500" onchange="updateLink(1,this);">
@@ -1103,9 +1103,9 @@
 						</label>
 						<span class="tooltip" style='cursor: help;position:relative;bottom:2px;font-family:"Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", Times, Symbola, Aegyptus, Code2000, Code2001, Code2002, Musica, serif, LastResort;'>⚠<span class="tooltiptext">Pretty experimental and limited browser support, though relatively low CPU usage.</span></span>
 						<span data-translate="chunked-mode">P2P Chunked-mode</span>
-						
-						
-						
+
+
+
 					</div>
 					<div  style="display:inline-block;margin-top: 12px; position: relative; margin-right:10px;">
 						<label class="switch" title="Increase video quality that guests in room see.">
@@ -1148,7 +1148,7 @@
 						  <input type="checkbox" data-param="&ssid" onchange="updateLink(1,this);">
 						  <span class="slider"></span>
 						</label>
-						<span data-translate="prefix-screenshare">Prefix screenshare IDs</span>	
+						<span data-translate="prefix-screenshare">Prefix screenshare IDs</span>
 						<Br />
 						<label class="switch" title="Allow the guest to select an avatar image for when they hide their camera">
 						  <input type="checkbox" data-param="&avatar" onchange="updateLink(1,this);">
@@ -1157,28 +1157,28 @@
 						<span data-translate="avatar-selection">Can select an Avatar image</span>
 					</div>
 					<div  style="display:inline-block;margin-top: 12px; position: relative; ">
-						
+
 						<label class="switch" title="Use Meshcast servers to restream video data from this guest to its viewers, reducing the CPU and upload load in some cases. Will increase latency a bit.">
 						  <input type="checkbox" data-param="&meshcast" onchange="updateLink(1,this);">
 						  <span class="slider"></span>
 						</label>
 						<span class="tooltip" style='cursor: help;position:relative;bottom:2px;font-family:"Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", Times, Symbola, Aegyptus, Code2000, Code2001, Code2002, Musica, serif, LastResort;'>⚠<span class="tooltiptext">Uses a server to restream data, rather than p2p.</span></span>
 						<span data-translate="meshcast-mode">Stream via server</span>
-						
+
 						<Br />
 						<label class="switch" title="The guest's self-video preview will appear tiny in the top right">
 						  <input type="checkbox" data-param="&mini" onchange="updateLink(1,this);">
 						  <span class="slider"></span>
 						</label>
 						<span data-translate="mini-self-preview">Mini self-preview</span>
-						
+
 						<Br />
 						<label class="switch" title="Show an ovelaid grid on the guest's preview video to help with self-centering of the guest.">
 						  <input type="checkbox" data-param="&grid" onchange="updateLink(1,this);">
 						  <span class="slider"></span>
 						</label>
 						<span data-translate="rule-of-thirds">Show rule-of-thirds grid</span>
-						
+
 						<Br />
 						<label class="switch" title="The guest can only see the Director's video, if provided">
 						  <input type="checkbox" data-param="&broadcast" id="broadcastSlider" onchange="updateLink(1,this);">
@@ -1211,63 +1211,63 @@
 						<span data-translate="obfuscate-link">Obfuscate with Invite.cam</span>
 					</div>
 				</div>
-			
+
 				<div class='directorBlock' id="customizeLinks3" style='display:none;margin-top:5px;padding-bottom:0;'>
 					<div  style="display:inline-block; position: relative; margin-right:10px; ">
 						<div style="display:inline-block;margin-top: 12px;   position: relative;">
-						
+
 						<label class="switch">
 							  <input type="checkbox" data-param="&st" onchange="updateLink(3,this, true);">
 							  <span class="slider"></span>
 							</label>
 							<span data-translate="hide-audio-only-sources">Hide audio-only sources</span>
 							<br />
-							
+
 							<label class="switch">
 								<input type="checkbox" data-param="&s" onchange="updateLink(3,this, true);">
 								<span class="slider"></span>
-							</label><span class="tooltip" style='cursor: help;position:relative;bottom:2px;font-family:"Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", Times, Symbola, Aegyptus, Code2000, Code2001, Code2002, Musica, serif, LastResort;'>⚠<span class="tooltiptext" style="width: 10em;">This can cause audio clicking issues</span></span> 
+							</label><span class="tooltip" style='cursor: help;position:relative;bottom:2px;font-family:"Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", Times, Symbola, Aegyptus, Code2000, Code2001, Code2002, Musica, serif, LastResort;'>⚠<span class="tooltiptext" style="width: 10em;">This can cause audio clicking issues</span></span>
 							<span data-translate="pro-audio-mode">Pro-audio mode</span>
 							<br />
-							
+
 							<label class="switch">
 								<input type="checkbox" id="codech264toggle" data-param="&codec=h264" onchange="updateLink(3,this, true);">
 								<span class="slider"></span>
-							</label><span class="tooltip" style='cursor: help;position:relative;bottom:2px;font-family:"Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", Times, Symbola, Aegyptus, Code2000, Code2001, Code2002, Musica, serif, LastResort;'>💉<span class="tooltiptext" style="width: 10em; background-color: #77C"><span data-translate="this-can-reduce-packet-loss">Can reduce packet loss video corruption in OBS on PC</span></span></span> 
+							</label><span class="tooltip" style='cursor: help;position:relative;bottom:2px;font-family:"Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", Times, Symbola, Aegyptus, Code2000, Code2001, Code2002, Musica, serif, LastResort;'>💉<span class="tooltiptext" style="width: 10em; background-color: #77C"><span data-translate="this-can-reduce-packet-loss">Can reduce packet loss video corruption in OBS on PC</span></span></span>
 							<span data-translate="use-h264-codec">Use H264 codec</span>
-							
+
 						</div>
 						<div style="display:inline-block;margin-top: 12px; position: relative; margin-right:10px; ">
-							
+
 							<label class="switch" title="The active speakers are made visible automatically">
 							  <input type="checkbox" data-param="&sas" onchange="updateLink(3,this);">
 							  <span class="slider"></span>
 							</label>
 							<span data-translate="show-active-speakers">Show active speakers</span>
 							<br />
-							
+
 							<label class="switch" title="Set the background color to bright green">
 							  <input type="checkbox" data-param="&chroma" onchange="updateLink(3,this, true);">
 							  <span class="slider"></span>
 							</label>
 							<span data-translate="green-background">Green background</span>
 							<br />
-							
+
 							<label class="switch" title="Fade videos in over 500ms">
 							  <input type="checkbox" data-param="&fadein" onchange="updateLink(3,this, true);">
 							  <span class="slider"></span>
 							</label>
 							<span data-translate="fade-videos-in">Fade-in videos</span>
 							<br />
-							
+
 							<label class="switch" title="Videos use an animated transition when being remixed">
 							  <input type="checkbox" data-param="&animate" onchange="updateLink(3,this);">
 							  <span class="slider"></span>
 							</label>
 							<span data-translate="animate-mixing">Animate mixing</span>
-							
+
 						</div>
-						
+
 						<div  style="display:inline-block;margin-top: 12px; position: relative; margin-right:10px;">
 							<label class="switch">
 							  <input type="checkbox" data-param="&sl" onchange="updateLink(3,this, true);">
@@ -1275,14 +1275,14 @@
 							</label>
 							<span data-translate="show-display-names">Show display names</span>
 							<br />
-							
+
 							<label class="switch" title="Add a 10px margin around all video elements">
 							  <input type="checkbox" data-param="&margin" onchange="updateLink(3,this);">
 							  <span class="slider"></span>
 							</label>
 							<span data-translate="add-margin">Add margin to videos</span>
 							<br />
-							
+
 							<label class="switch">
 							  <input type="checkbox" data-param="&vb=20000" onchange="updateLink(3,this, true);">
 							  <span class="slider"></span>
@@ -1290,7 +1290,7 @@
 							<span class="tooltip" style='cursor: help;position:relative;bottom:2px;font-family:"Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", Times, Symbola, Aegyptus, Code2000, Code2001, Code2002, Musica, serif, LastResort;'>⚠<span class="tooltiptext">This can cause video playback to lag</span></span>
 							<span data-translate="unlock-video-bitrate">Unlock video bitrate</span>
 							<br />
-							
+
 							<label class="switch" title="Disable fit-to-window optmized video scaling for added sharpness; increases CPU / Network load though.">
 							  <input type="checkbox" data-param="&scale=100" onchange="updateLink(3,this, true);">
 							  <span class="slider"></span>
@@ -1298,7 +1298,7 @@
 							<span class="tooltip" style='cursor: help;position:relative;bottom:2px;font-family:"Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", Times, Symbola, Aegyptus, Code2000, Code2001, Code2002, Musica, serif, LastResort;'>⚠<span class="tooltiptext">This can cause higher CPU load for everyone in the room</span></span>
 							<span data-translate="disable-downscaling">Increase sharpness</span>
 						</div>
-						
+
 						<div  style="display:inline-block;margin-top: 12px; position: relative; ">
 							<label class="switch" title="Playback the video with mono-channel audio">
 							  <input type="checkbox" data-param="&mono" onchange="updateLink(3,this, true);">
@@ -1306,14 +1306,14 @@
 							</label>
 							<span data-translate="force-mono-audio">Force mono audio</span>
 							<br />
-							
+
 							<label class="switch" title="Have the videos fit their respective areas, even if it means cropping a bit">
 							  <input type="checkbox" data-param="&cover" onchange="updateLink(3,this, true);">
 							  <span class="slider"></span>
 							</label>
 							<span data-translate="fill-video-space">Crop video to fit</span>
 							<br />
-							
+
 							<label class="switch" title="Have videos be aligned with sizing designed for vertical video">
 							  <input type="checkbox" data-param="&916" onchange="updateLink(3,this, true);">
 							  <span class="slider"></span>
@@ -1337,7 +1337,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div id="hiddenElements"></div>
 		<div id="overlayClockContainer" data-menu='context-menu-clock' data-initial="600" class="hidden"><span id="overlayClock"></span></div>
 		<div id="overlayClockContainer2" data-menu='context-menu-clock' data-initial="600" class="hidden"><span id="overlayClock2"></span></div>
@@ -1349,7 +1349,7 @@
 		<div id="controls_blank" class="hidden controlCenterBox">
 			<div class="controlsGrid">
 				<!-- General Controls -->
-				<div class="row two"> 
+				<div class="row two">
 					<button data-action-type="forward" class="mainonly advanced" title="Move the user to another room, controlled by another director" onclick="directMigrate(this, event);">
 						<i class="las la-paper-plane"></i>
 						<span data-translate="forward-to-room">Transfer</span>
@@ -1362,7 +1362,7 @@
 					<!-- Messaging integrated menu -->
 					<span class="director-message-box hidden" data-action-type="messaging-box">
 						<textarea data-action-type="messaging-box-text" placeholder="Enter your message here"></textarea>
-						
+
 						<span data-action-type="messaging-box-toggle" title="Toggle between the message appearing as a large overlay and as normal chat">
 							<i class="las la-bell" style="font-size:170%; color:#FFF; cursor:pointer;"></i>
 						</span>
@@ -1374,7 +1374,7 @@
 							<i class="las la-reply"></i>
 							<span data-translate="send-message">send message</span>
 						</button>
-					</span>	
+					</span>
 
 					<button data-action-type="hangup" class="mainonly"  title="Force the user to Disconnect. They can always reconnect." onclick="directHangup(this, event);">
 						<i class="las la-sign-out-alt" style="color:#900"></i>
@@ -1395,7 +1395,7 @@
 						<span data-translate="add-to-scene">add to scene 1</span>
 					</button>
 				</div>
-				
+
 				<!-- Volume & Mute Controls -->
 				<div class="row fourth">
 					<span class="tooltip" style="border: 0;">
@@ -1406,7 +1406,7 @@
 						<i class="las la-microphone-slash" style="color:#900"></i>
 					</button>
 				</div>
-				
+
 
 				<!----	  /////// DROPDOWN BREAK ////////			-->
 				<span class="hideDropMenu" onclick="toggleByDataset('1');getById('chevarrow3').classList.toggle('bottom');getById('chevarrow3').classList.toggle('right');">
@@ -1454,11 +1454,11 @@
 							<span>S9</span>
 						</button>
 					</div>
-					
+
 					<span class="spacer"></span>
 
 				</div>
-				
+
 
 				<!-- Graph Section for Scenes -->
 				<span class="graphSection hidden" data-action-type="stats-graphs-bitrate" >
@@ -1473,7 +1473,7 @@
 						<span class="hidden" style="word-break: break-all;" data-video-codec="true">video codec</span>
 					</span>
 				</span>
-				
+
 
 				<!----	  /////// DROPDOWN BREAK ////////			-->
 				<span class="hideDropMenu" onclick="toggleByDataset('2');getById('chevarrow4').classList.toggle('bottom');getById('chevarrow4').classList.toggle('right');">
@@ -1490,7 +1490,7 @@
 						<button class="mainonly" data-action-type="toggle-remote-speaker" title="Toggle the remote guest's speaker output" onclick="remoteSpeakerMute(this, event);">
 							<i class="las la-volume-off"></i> <span data-translate="toggle-remote-speaker">Deafen Guest</span>
 						</button>
-						
+
 						<button class="mainonly" data-action-type="toggle-remote-display" title="Toggle the remote guest's display output" onclick="remoteDisplayMute(this, event);">
 							<i class="las la-eye-slash"></i> <span data-translate="toggle-remote-display">Blind Guest</span>
 						</button>
@@ -1507,23 +1507,23 @@
 							<i class="las la-circle"></i>
 							<span data-translate="record-remote"> Record Remote</span>
 						</button>
-						
+
 						<button  class="mainonly" data-action-type="change-params" style="display:none" title="Change user parameters" onclick="promptUser('transferSettingsTemplate', this.dataset.UUID);">
 							<i class="las la-cog"></i>
 							<span data-translate="change-params">URL Params</span>
 						</button>
-						
+
 						<button  class="mainonly" data-action-type="open-file-share"  title="Allow the guest to select a file to upload to the director. Once shared, it will show in the chat as a download link." onclick="requestFileUpload(this)">
 							<i class="las la-file-upload"></i>
 							<span data-translate="request-upload"> Request File</span>
 						</button>
-						
+
 						<button class="mainonly" data-action-type="create-timer"  title="Set a countdown timer that this guest sees. CTRL (cmd) + click to pause." onclick="directTimer(this, event);">
 							<i class="las la-clock"></i>
 							<span data-translate="create-timer">Create Timer</span>
 						</button>
 					</div>
-					
+
 					<!-- Row of Channels -->
 					<div class="row six advanced">
 						<button class="btn-HL-blue center" data-action-type="add-channel" title="Set to Audio Channel 1" onclick="changeChannelOffset(this.dataset.UUID, 0);">
@@ -1545,7 +1545,7 @@
 							<span>C6</span>
 						</button>
 					</div>
-					
+
 					<!-- Row of Groups -->
 					<div class="row six advanced">
 						<button class="btn-HL-green center" data-action-type="toggle-group" data-group="1" title="Add/remove from group 1" onclick="changeGroup(this);">
@@ -1601,7 +1601,7 @@
 					</div>
 
 					<span class="spacer big"></span>
-					 
+
 					<!-- Further Audio/Video Settings -->
 					<div class="row two" data-cluster="3">
 						<button data-action-type="advanced-audio-settings" data-active="false" title="Remote Audio Settings" onclick="requestAudioSettings(this);">
@@ -1615,20 +1615,20 @@
 					</div>
 
 				</div>
-				
+
 				<span class="spacer"></span>
 			</div>
 		</div>
-		
+
 		<!-- &ShowDirector Control-Buttons Box -->
 		<div id="controls_directors_blank" class="hidden controlCenterBox">
 			<div class="controlsGrid">
 				<!-- General Controls -->
-				<div class="row two"> 
+				<div class="row two">
 					<button data-action-type="recorder-local" title="Start Recording this remote stream to this local drive. *experimental*'" onclick="recordLocalVideoToggle();">
 						<i class="las la-circle"></i>
 						<span data-translate="record-director-local"> Record</span>
-					</button> 
+					</button>
 					<button data-action-type="mute-scene" title="Remotely Mute this Audio in all remote '&scene' views" onclick="directMute(this, event);">
 						<i class="las la-microphone-slash"></i>
 						<span data-translate="mute-scene">mute in scene</span>
@@ -1643,7 +1643,7 @@
 					</button>
 				</div>
 
-				
+
 				<!-- Row of Scenes -->
 				<div class="row six advanced">
 					<button class="btn-HL-peach center" data-action-type="addToScene" data-scene="2" title="Add to Scene 2" onclick="directEnable(this, event);">
@@ -1690,7 +1690,7 @@
 				</div>
 
 				<span class="spacer"></span>
-				
+
 				<!-- Mix Order Control -->
 				<span class="row three advanced" data-action-type="ordering">
 					<button class="center" data-action-type="order-down" title="Shift this Video Down in Order" onclick="changeOrderDirector(-1);">
@@ -1707,13 +1707,13 @@
 
 				<span class="spacer"></span>
 
-			</div>	
+			</div>
 		</div>
-		
+
 		<div id="popupSelector" style="display:none;">
 				<span id="videoMenu3">
 					<i class="las la-video"></i><span data-translate="video-source"> Video Source: </span>
-					<select id="videoSource3" ></select>			
+					<select id="videoSource3" ></select>
 					<span id="refreshVideoButton" title="Activate or Reload this video device.">
 						<i style="top: 3px; cursor: pointer; font-size: 120%;  position: relative; left: 10px;" class="las la-sync-alt"></i>
 					</span>
@@ -1728,12 +1728,12 @@
 							<label for="fullhd3">
 								<span data-translate="max-resolution">Max Resolution</span>
 							</label> |
-							
+
 							<input type="radio" checked id="halfhd3" name="resolution" value="1" />
 							<label for="halfhd3">
 								<span data-translate="balanced">Balanced</span>
 							</label> |
-							
+
 							<input type="radio" id="nothd3" name="resolution" value="2" />
 							<label for="nothd3">
 								<span data-translate="smooth-cool">Smooth and Cool</span>
@@ -1743,7 +1743,7 @@
 						</center>
 					</span>
 				</span>
-				
+
 				<div class="form-group multiselect" alt="tip: Hold CTRL (command) to select Multiple" title="tip: Hold CTRL (command) to select Multiple" >
 					<span class='gear_microphone gearflat hidden'>
 						<input type="checkbox" id='micStereoMonoInput3' onchange="toggleMonoStereoMic(this);">Mono
@@ -1759,7 +1759,7 @@
 						<li>
 						</li>
 					</ul>
-					
+
 				</div>
 				<br />
 				<span id="headphonesDiv3" style="display: block;">
@@ -1769,7 +1769,7 @@
 					</div>
 					<select id="outputSource3" ></select>
 				</span>
-				
+
 				<div id="avatarDiv3" class="hidden">
 						<div style="text-align: left;display: inline-block;">
 							<i class="las la-robot"></i><span data-translate="select-avatar-image"> Default Avatar / Placeholder Image: </span>
@@ -1782,11 +1782,11 @@
 							</label>
 							<label class="avatarSelection">
 							  <i class="las la-hdd" style="font-size: 3em;"></i><br />Select Local Image
-							  <input type="file" onchange="changeAvatarImage(event, this)" accept="image/*" style="position: fixed; top: -100em; margin-left:10px; border:1px solid #555;"> 
+							  <input type="file" onchange="changeAvatarImage(event, this)" accept="image/*" style="position: fixed; top: -100em; margin-left:10px; border:1px solid #555;">
 							</label>
 						</div>
 					</div>
-				
+
 				<span id="effectsDiv3" style="display: none; user-select: none;">
 					<div class="title">
 						<i class="las la-robot"></i>
@@ -1795,7 +1795,7 @@
 					<select id="effectSelector3" onchange="effectsDynamicallyUpdate(event, this);">
 						<option value="0" data-translate="no-effects-applied">No effects applied</option>
 						<option value="3" data-translate="blurred-background">Blurred background</option>
-						<option value="4" data-translate="digital-greenscreen">Digital greenscreen</option>	
+						<option value="4" data-translate="digital-greenscreen">Digital greenscreen</option>
 						<option value="5" data-translate="virtual-background">Virtual background</option>
 						<option value="6" data-translate="face-mesh" title="experimental">Face mesh (slow load) 👨‍🔬</option>
 						<option value="7" data-translate="digital-zoom">Digital zoom</option>
@@ -1807,44 +1807,44 @@
 						<i class="las la-info-circle"></i>
 					</span>
 					<div id="selectImageTFLITE3" style="display:none;margin-top:10px;">
-						
+
 					</div>
 					<div id="selectEffectAmount3" style="display:none;margin-top:10px;">
 						<label for="selectEffectAmountInput" style="width: 113px;display: inline-block;">Effect amount:</label>
 						<input id="selectEffectAmountInput3" style="display: inline-block;width: 350px; max-width: 60%;margin:6px 0;" name="selectEffectAmountInput3" title="Adjust the amount of effect applied" type="range" oninput="changeEffectAmount(event, this)" onchange="changeEffectAmount(event, this)" min="0" step="1" max="20">
 					</div>
-					
+
 				</span>
 				<button id="shareScreenGear" style="width: 135px; padding:20px;text-align:center;" onclick="grabScreen()"><b>Share Screen</b><br /><i style="padding:5px; font-size:300%;" class="las la-desktop"></i></button>
-				
+
 				<button id="pIpStartButton" style="width: 135px; background-color:#EFEFEF;padding:20px;text-align:center;display:none;"><b>Preview PiP VIdeo</b><br /><i style="padding:5px; font-size:300%;color:black;" class="las la-compress-arrows-alt"></i></button>
-				
-				
+
+
 				<div class="hidden" id="grabDirectorSoloLinkParent" title="The solo view link of the Director's video."><i class="las la-user"></i> Director's solo link:<a onclick="copyFunction(this,event)" data-drag="1" draggable="true" id="grabDirectorSoloLink" data-menu="context-menu" class="task" ></a></div>
 				<br />
 				<button onclick="toggleSettings()" class="toggleSettings"><i class="chevron right" style="font-size:150%;top:3px;position:relative;"></i> <b><span data-translate="close-settings">Close Settings</span></b></button>
-				
+
 				<button id='advancedOptionsAudio' onclick="this.classList.toggle('highlight');toggle(getById('popupSelector_constraints_audio'),false,false); getById('popupSelector_constraints_loading').style.visibility='visible';" class="advancedToggle">
 				<i class="las la-sliders-h" style="font-size:150%;top:3px;position:relative;"></i> <b>Audio</b></button>
-				
+
 				<button id='advancedOptionsCamera' onclick="this.classList.toggle('highlight');toggle(getById('popupSelector_constraints_video'),false,false);  getById('popupSelector_constraints_loading').style.visibility='visible';" class="advancedToggle">
 				<i class="las la-sliders-h" style="font-size:150%;top:3px;position:relative;"></i> <b>Video</b></button>
-				
+
 				<span class="mobileHide">
 					<button id='advancedOptionsGeneral' onclick="this.classList.toggle('highlight');toggle(getById('popupSelector_user_settings'),false,false);  getById('popupSelector_user_settings').style.visibility='visible';" style='padding: 10px 12px 12px 8px;margin: 0px 0px 0px 10px;'>
 					<i class="las la-user-cog" style="font-size:150%;top:1.5px;position:relative;"></i> <b><span data-translate="user">User</span></b></button>
 				</span>
-				
+
 				<span id="popupSelector_constraints_audio" class="popupSelector_constraints" style="display: none;">
-				
+
 				</span>
 				<span id="popupSelector_constraints_video" class="popupSelector_constraints" style="display: none;">
-				
+
 				</span>
 				<span id="popupSelector_constraints_loading" style="display: none; visibility:hidden">
 					<i class='las la-spinner icn-spinner' style='margin:30px;font-size:400%;color:white;'></i>
 				</span>
-				
+
 				<span id="popupSelector_user_settings" style="display: none; visibility:hidden">
 					<label title="Choose a hotkey for Hold-to-Talk. If using Electron Capture, elevate privilleges to have it become global">Hold-to-Talk Hot-key</label>
 					<input type="text" id="pptHotKey"  placeholder="press a key here" style="padding-left: 7px;" onkeypress="event.preventDefault;event.stopPropagation();return false;" onkeyup="event.preventDefault;event.stopPropagation();return false;" onkeydown="setHotKey();"/>
@@ -1862,7 +1862,7 @@
 					<br /><br />
 					<button class="generalButton" onclick="cycleStyleOptions();" id='toggleWaveformButton' title="Audio-only sources can be stylized in different ways">Cycle between several audio-visualizations styles</button>
 					<button class="generalButton" onclick="clearStorage();" title="Clear site's local storage and settings">Clear site's local browser storage and saved settings</button>
-					
+
 				</span>
 		</div>
 		<nav id="context-menu" class="context-menu">
@@ -2005,7 +2005,7 @@
 						<span data-translate="save-current-frame">Save frame to disk</span>
 					</a>
 				</li>
-				
+
 				<li class="context-menu__item">
 					<a href="#" class="context-menu__link" data-action="ShowStats">
 						<i class="las la-external-link"></i>
@@ -2044,10 +2044,10 @@
 				</li>
 			</ul>
 		</nav>
-		
+
 		<div id="chatModule" style="display:none;text-align:right">
 			<a target="popup" id="popOutChat" style="cursor:pointer;text-align:right;color:#B3C7F9;" onclick="createPopoutChat();"><i class="las la-external-link-alt"></i></a>
-			<div id="chatBody"> 
+			<div id="chatBody">
 				<div class="inMessage" id="welcomeMsg" data-translate='welcome-to-vdo-ninja-chat'>
 					Welcome to the chat! You can send text messages directly to connected peers from here.
 				</div>
@@ -2055,25 +2055,25 @@
 			<input type="text" id="chatInput" placeholder="Enter chat message to send here" onkeypress="EnterButtonChat(event)" />
 			<button class="chatBarInputButton" onclick="sendChatMessage()" data-translate='send-chat'>Send</button>
 		</div>
-		
-		
+
+
 		<div id="roomSettings" class="customModelPopup" style="display:none; user-select: none;">
 			<div class="promptModalInner">
 				<span class='modalClose' onclick="toggleRoomSettings();">×</span>
 				<span class='modalClose' style="right:25px;" onclick="this.parentNode.parentNode.classList.toggle('pinToSide');getById('main').classList.toggle('makeSmallerDirectorRoom');">📌</span>
 				<span></span>
 				<h3 data-translate="change-room-settings">Change room settings</h3><br />
-				
+
 				<label title="Increase this at your peril. Changes the total inbound video bitrate per guest; mobile devices excluded." for="trbSettingInput" data-translate="change-room-video-quality">Change room video quality:</label>
 				<span style="margin-left: 6px;" id="trbSettingInputFeedback"></span>-kbps
 				<input id="trbSettingInput" type="range" min="0" max="4000" value="500" onchange="getById('trbSettingInputManual').value=this.value;changeTRB(this);" oninput="getById('trbSettingInputFeedback').innerHTML = this.value;" style="width:calc(100% - 60px);display:inline-block;" />
 				<input id="trbSettingInputManual" min="0" value="500" onchange="getById('trbSettingInput').value=this.value;changeTRB(this);" oninput="getById('trbSettingInputFeedback').innerHTML = this.value;" style="width:42px;display:inline-block;text-align: center;" />
-				
+
 				<span style="margin: 20px 0 0 0;display:block" id='highlightDirectorSpan' title="Only the director's video will be visible to guests and within group scenes">
 					<input id="highlightDirector" style="width: 15px; height: 15px; margin:10px;" name="highlightDirector"  data-action-type="solo-video" type="checkbox" onchange="requestInfocus(this, event);" />
-					<label for="highlightDirector" data-translate="highlight-director-only-video-guests-will-see">Highlight Director (only video guests will see)</label> 
+					<label for="highlightDirector" data-translate="highlight-director-only-video-guests-will-see">Highlight Director (only video guests will see)</label>
 				</span>
-				
+
 				<span style="margin: 20px 0 0 0;display:block" id='globalTimerDirectorSpan'>
 					<button data-action-type="create-timer-global" title="Set a countdown timer that this guest sees. CTRL (cmd) + click to pause." onclick="directRoomTimer(this, event);">
 						<i class="las la-clock"></i>
@@ -2084,20 +2084,20 @@
 						<span data-translate="create-clock-timer">Toggle Room Clock</span>
 					</button>
 				</span>
-				
+
 				<span style="margin: 5px 0 0 0;display:block" id='enableCodirector' title="Allow for remote co-directors">
 					<span id="coDirectorEnableSpan">
 						<input id="coDirectorEnable" style="width: 15px; height: 15px; margin:10px;" name="coDirectorEnable"  data-action-type="codirector" type="checkbox" onchange="toggleCoDirector(this);" />
-						<label for="coDirectorEnable" data-translate="allow-for-remote-co-directors">Allow for remote co-directors</label> 
+						<label for="coDirectorEnable" data-translate="allow-for-remote-co-directors">Allow for remote co-directors</label>
 					</span>
 					<span style="margin:0;display:none;" id='codirectorSettings'>
 						<div>
 							<input id="codirectorSettings_transfer" style="width: 15px; height: 15px; margin:10px;" name="codirectorSettings_transfer"  data-action-type="codirector_transfer" type="checkbox" onchange="toggleCoDirector_transfer(this);" />
-							<label for="codirectorSettings_transfer" data-translate="allow-co-directors-to-transfer-guests">Allow co-directors to transfer guests</label> 
+							<label for="codirectorSettings_transfer" data-translate="allow-co-directors-to-transfer-guests">Allow co-directors to transfer guests</label>
 						</div>
 						<div style="display:none;">
 							<input id="codirectorSettings_changeurl" style="width: 15px; height: 15px; margin:10px; " name="codirectorSettings_changeurl"  data-action-type="codirector_changeurl" type="checkbox" onchange="toggleCoDirector_changeurl(this);" />
-							<label for="codirectorSettings_changeurl" data-translate="allow-co-directors-to-change-a-guests-url">Allow co-directors to change a guest's URL</label> 
+							<label for="codirectorSettings_changeurl" data-translate="allow-co-directors-to-change-a-guests-url">Allow co-directors to change a guest's URL</label>
 						</div>
 						<div style="margin:8px;">
 							<label for="codirectorSettings_invite" data-translate="basic-co-director-invite-link">Basic co-director invite link:</label>
@@ -2105,15 +2105,15 @@
 						</div>
 					</span>
 				</span>
-				
-				
+
+
 				<span style="margin: 5px 0 0 0;display:block" >
 					<input id="widgetURCheck" style="width: 15px; height: 15px; margin:10px;" name="widgetURCheck"  data-action-type="widgetURCheck" type="checkbox" onchange="toggleWidgetURL(this);" />
-					<label for="widgetURCheck">Embed a sidebar widget for all</label> 
+					<label for="widgetURCheck">Embed a sidebar widget for all</label>
 					<input id="widgetURL" onmousedown="toggleWidgetURL(this);event.preventDefault" onclick="toggleWidgetURL(this);event.preventDefault" class="hidden" style="cursor:pointer; display:inline-block; margin: 3px 0; margin-left: 10px; min-width: 230px; padding: 4px 5px 3px 5px; border: 1px solid black;" name="widgetURL" placeholder="Enter a URL for the sidebar page" type="text"  />
 				</span>
-				
-				
+
+
 				<span style="margin: 5px 0 0 0;display:block">
 					<button data-action-type="local-global-record" title="Record all the guests" onclick="
 						document.querySelectorAll('[data-action-type=\'recorder-local\']').forEach(target=>{
@@ -2130,7 +2130,7 @@
 						<span data-translate="local-global-record">Local record - stop all</span>
 					</button>
 				</span>
-				<span style="margin: 5px 0 0 0;display:block">	
+				<span style="margin: 5px 0 0 0;display:block">
 					<button data-action-type="remote-global-record" title="Record all the guests" onclick="
 						window.focus();
 						async function jjj(){
@@ -2154,11 +2154,11 @@
 						<span data-translate="remote-global-record">Remote record - stop all</span>
 					</button>
 				</span>
-				
-				
+
+
 			</div>
 		</div>
-		
+
 		<div id="bufferSettings" style="display:none; user-select: none;">
 			<div class="promptModalInner">
 				<span class='modalClose' onclick="toggleBufferSettings();">×</span>
@@ -2170,7 +2170,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div id="remoteOBSControl" class="customModelPopup" style="display:none;">
 			<div class="promptModalInner">
 				<span class='modalClose' onclick="toggleOBSControls();">×</span>
@@ -2194,7 +2194,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div id="transferSettingsTemplate" style="display:none">
 			<h3>Change guest settings</h3><br />
 			<label class="switch" title="Cannot see videos">
@@ -2252,13 +2252,13 @@
 		</div>
 
 		<div id="connectUsers">
-			<div style="margin-bottom:5px"><u ><span data-translate="invisible-guests">Not Visible</span></u> 
+			<div style="margin-bottom:5px"><u ><span data-translate="invisible-guests">Not Visible</span></u>
 			<span title="Hide this window" id='hideusers' style="cursor:pointer;font-size:1.2em; float: right;" onclick="getById('connectUsers').classList.add('hidden');getById('closedList_connectUsers').classList.remove('hidden');"><i class="las la-times"></i></span></div>
 			<span style="height:5px;display:block;"></span>
 			<div id="userList">
 			</div>
 		</div>
-		
+
 		<div id="signalMeterTemplate" class="signal-meter hidden" data-cpu="0" data-level="0">
 			<i class="las la-signal"></i>
 			<i class="las la-fire-alt"></i>
@@ -2298,13 +2298,13 @@
 		<div id="selectImageTFLITE_contents" style="display:flex;overflow-x:auto;" class="hidden">
 			<label style="min-width:100px;display:inline-block;margin:0px 1px; text-align:center; cursor:pointer;">
 				<i class="las la-hdd" style="font-size: 3em;"></i><br /><span data-translate="select-local-image">Select Local Image</span>
-				<input type="file"  accept="image/*" onchange="changeTFLiteImage(event, this)" style="position: fixed; top: -100em; margin-left:10px; border:1px solid #555;"> 
+				<input type="file"  accept="image/*" onchange="changeTFLiteImage(event, this)" style="position: fixed; top: -100em; margin-left:10px; border:1px solid #555;">
 			</label>
 		</div>
 		<div id="gridlayout"></div>
 		<audio id="testtone" style="display:none;" preload="none">
-			<source src="./media/tone.mp3" type="audio/mpeg"> 
-			<source src="./media/tone.ogg" type="audio/ogg"> 
+			<source src="./media/tone.mp3" type="audio/mpeg">
+			<source src="./media/tone.ogg" type="audio/ogg">
 		</audio>
 		<div class="gone" >
 			<!-- This image is used when dragging elements -->
@@ -2314,7 +2314,7 @@
 		</div>
 		<div id="screenPopup" class="popup-screen">
 			<button onclick="getById('screenPopup').style.display='none';margin:0;padding:0;">Close Window</button>
-			<div>See the 
+			<div>See the
 				<a style="text-decoration: none; color: blue;" target="_blank" href="https://docs.vdo.ninja/advanced-settings">documentation</a> for more options and info.
 			</div>
 		</div>
@@ -2369,7 +2369,7 @@
 			Meshcast publishing region: <select name="edgelist" id="edgelist" onchange="selectMeshcast(this);" title="Select a location that is closest to both you and your audience."></select>
 		</div>
 		<script>
-		
+
 			if (window.location.hostname.indexOf("www.obs.ninja") == 0) {
 				window.location = window.location.href.replace("www.obs.ninja","obs.ninja"); // the session.salt is domain specific; let's consolidate www as a result.
 			} else if (window.location.hostname.indexOf("www.vdo.ninja") == 0) {
@@ -2378,37 +2378,37 @@
 				console.error("This site must be run in a secure context; please ensure all links, iframes, and parent windows are using SSL");
 			}
 
-		
+
 			var session = WebRTC.Media; // session is a required global variable if configuring manually. Run before loading main.js but after webrtc.js.
 			session.version = "23.2b";
 			session.streamID = session.generateStreamID(); // randomly generates a streamID for this session. You can set your own programmatically if needed
-			
+
 			session.defaultPassword = "someEncryptionKey123"; // Change this password if self-deploying for added security/privacy
 			// session.salt = location.hostname; // used only if password is not == False. You can change to "session.salt = location.hostname+location.pathname;" for greater deployment isolation
-			
+
 			session.stunServers = [{ urls: ["stun:stun.l.google.com:19302", "stun:stun4.l.google.com:19302"]}]; // google stun servers. default
-			
-			///////////////  ------  Custom basic TURN SETUP SECTION STARTS Here --------
-			// session.configuration = {         // uncomment to disable the default usage of the vdo.ninja turn servers.
-			//	iceServers: session.stunServers,
-			//	sdpSemantics: 'unified-plan'
-			// };
-			// var turn = {}; // Just an example entry for a basic TURN server 
+
+			/////////////  ------  Custom basic TURN SETUP SECTION STARTS Here --------
+			session.configuration = {         // uncomment to disable the default usage of the vdo.ninja turn servers.
+				iceServers: session.stunServers,
+				sdpSemantics: 'unified-plan'
+			};
+			var turn = {}; // Just an example entry for a basic TURN server
+			turn.username = "zce";
+			turn.credential = "zceme";
+			turn.urls = ["turns:ts.uieee.com:443"];
+			session.configuration.iceServers.push(turn);
+
+			// turn = {}; // second turn server example entry.
 			// turn.username = "steve";
 			// turn.credential = "justtesting";
-			// turn.urls = ["turn:turn.obs.ninja:443"]; 
+			// turn.urls = ["turn:turn2.obs.ninja:443"];
 			// session.configuration.iceServers.push(turn);
-			//
-			// turn = {}; // second turn server example entry. 
-			// turn.username = "steve";
-			// turn.credential = "justtesting";
-			// turn.urls = ["turn:turn2.obs.ninja:443"]; 
-			// session.configuration.iceServers.push(turn);
-			/////////////// ------------ END OF TURN SETUP SECTION -------
+			///////////// ------------ END OF TURN SETUP SECTION -------
 
 			/////////////// --------  Alternative custom TURN SETUP SECTION here ---------
 			// Use this section if you plan to use the turn-credentials.php sample and its use-auth-secret and static-auth-secret method, rather than a plain password
-			// 
+			//
 			// try {
 				// session.ws = false; // prevents connection
 				// var phpcredentialsRequest = new XMLHttpRequest();
@@ -2451,10 +2451,10 @@
 			// session.wss = "wss://wss.vdo.ninja:443"; // US-East (Default)
 
 			//  If wanting to fully-self-host, uncomment the following and deploy your own websocket server; good for air-gapped deployments
-			// session.wss = "wss://wss.yourdomainhere.com:443"; // https://github.com/steveseguin/websocket_server 
+			// session.wss = "wss://wss.yourdomainhere.com:443"; // https://github.com/steveseguin/websocket_server
 			// session.customWSS = true;
 			//////
-			
+
 			///// The following lets you set the defaults
 
 			// session.webcamonly // true,false
@@ -2494,7 +2494,7 @@
 			// session.record = false; // uncomment to block users from being able to record via vdo.ninja's built in recording function
 		</script>
 		<script type="text/javascript" crossorigin="anonymous" id="lib-js" src="./lib.js?ver=701"></script>
-		<!-- 
+		<!--
 		// If you wish to change branding, blank offers a good clean start.
 		<script type="text/javascript" id="main-js" src="./main.js" data-translation="blank"></script>
 		-->
